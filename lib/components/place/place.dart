@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import "place_title.dart";
 import 'place_description.dart';
+import '../buttons/button_purple.dart';
 
 class Place extends StatelessWidget {
   String placeName;
@@ -11,9 +12,11 @@ class Place extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         PlaceTitle(placeName),
-        PlaceDescription(placeDescription)
+        PlaceDescription(placeDescription),
+        ButtonPurple('Navigate')
       ],
     );
   }
